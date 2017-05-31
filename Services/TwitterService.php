@@ -1,4 +1,4 @@
-<?phpSSS
+<?php
 /**
  * Description of TwitterService
  *
@@ -6,6 +6,7 @@
  * Used to interact with Twitter API
  */
 require_once('External\Twitter\TwitterAPIExchange.php');
+require_once('Includes\Properties.php');
 class TwitterService {
     /**
      * put your code here
@@ -22,10 +23,10 @@ class TwitterService {
         $requestMethod = 'GET';
         //setting the twitter app credentials
         $settings = array(
-                            'oauth_access_token' => "577935649-IsYosowKwiGIVqQg2zGrhiZLU5dRm6RbL6hyupJr",
-                            'oauth_access_token_secret' => "g5EXmpmU9rKWyF2GtaNaIPciW3c6BiCgHIqihuELCm0tc",
-                            'consumer_key' => "rjOhiPCNZewPjG17XyJ7Mguvb",
-                            'consumer_secret' => "e3Exfa3olWz7YjsaW50NJ4NMpX2jDNZkitn5vnntqFtnMXE4rx"
+                            'oauth_access_token' => Properties::get("ACCESS_TOKEN"),
+                            'oauth_access_token_secret' => Properties::get("ACCESS_TOKEN_SECRET"),
+                            'consumer_key' => Properties::get("CONSUMER_KEY"),
+                            'consumer_secret' => Properties::get("CONSUMER_SECRET")
                         );
         $twitter = new TwitterAPIExchange($settings);
         $data= $twitter->setGetfield($getfield)

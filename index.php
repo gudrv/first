@@ -15,7 +15,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>ReTweetes</title>
         <link rel="stylesheet" href="main.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
@@ -25,7 +25,7 @@ and open the template in the editor.
         foreach ($tweets as $value) {
             ?>
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-8 col-md-offset-2 tweetbox" >
                         <a class="account-group" href="http://twitter.com/<?php echo $value->userscreenname; ?>">
                             <img class="avatar" src="<?php echo $value->userprofileimageurl; ?>" alt="">
                             <span class="FullNameGroup">
