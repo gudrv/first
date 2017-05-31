@@ -30,5 +30,6 @@ Put the project in your server folder and access it usig the IP address of the s
 
 ## License
 
+
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
